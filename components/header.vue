@@ -117,10 +117,6 @@
               aria-labelledby="navbarDropdown-user"
             >
               <a
-                href="http://117.72.77.209:1004"
-                class="dropdown-item"
-              >DDN</a>
-              <a
                 href="http://117.72.77.209:1003"
                 class="dropdown-item"
               >Wallet</a>
