@@ -110,6 +110,34 @@
               role="button"
               data-toggle="dropdown"
               aria-expanded="false"
+            >测试Demo
+            </nuxt-link>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdown-user"
+            >
+              <a
+                href="http://117.72.77.209:1004"
+                class="dropdown-item"
+              >DDN</a>
+              <a
+                href="http://117.72.77.209:1005"
+                class="dropdown-item"
+              >Wallet</a>
+              <a
+                href="http://117.72.77.209:1006"
+                class="dropdown-item"
+              >BY</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <nuxt-link
+              class="nav-link dropdown-toggle"
+              to=""
+              id="navbarDropdown-user"
+              role="button"
+              data-toggle="dropdown"
+              aria-expanded="false"
             >趣味
             </nuxt-link>
             <div
@@ -237,11 +265,11 @@ export default {
     // this.fetchDate()
   },
   mounted: function () {
-        $("#navbarText a").click(function () {
-          if($(this).attr("id")!="navbarDropdown-user"){
-            $("#navbarText").collapse('hide');
-          }
-        });
+    $("#navbarText a").click(function () {
+      if($(this).attr("id")!="navbarDropdown-user"){
+        $("#navbarText").collapse('hide');
+      }
+    });
     // $(window).scroll(function () {
     //   //小屏幕下的导航条折叠
     //   if ($(window).width() < 768) {
