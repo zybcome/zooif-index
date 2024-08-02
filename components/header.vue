@@ -110,7 +110,7 @@
               role="button"
               data-toggle="dropdown"
               aria-expanded="false"
-            >测试Demo
+            >Demo
             </nuxt-link>
             <div
               class="dropdown-menu"
@@ -121,11 +121,11 @@
                 class="dropdown-item"
               >DDN</a>
               <a
-                href="http://117.72.77.209:1005"
+                href="http://117.72.77.209:1003"
                 class="dropdown-item"
               >Wallet</a>
               <a
-                href="http://117.72.77.209:1006"
+                href="http://117.72.77.209:1002"
                 class="dropdown-item"
               >BY</a>
             </div>
