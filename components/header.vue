@@ -6,7 +6,7 @@
     >
       <a
         class="navbar-brand"
-        href="http://117.72.77.209:1008/"
+        :href="api.ServerDomain+':1008/'"
         style="font-size:24px;font-weight: bold;"
       >
         ZooIf
@@ -37,7 +37,7 @@
           >
             <a
               class="nav-link"
-              href="http://117.72.77.209:1008/"
+              :href="api.ServerDomain+':1008/'"
             >
               首页
             </a>
@@ -48,7 +48,7 @@
           >
             <a
               class="nav-link"
-              href="http://117.72.77.209:1001"
+              :href="api.ServerDomain+':1001/'"
               target="_blank"
             >
               layui
@@ -60,7 +60,7 @@
           >
             <a
               class="nav-link"
-              href="http://117.72.77.209"
+              :href="api.ServerDomain"
               target="_blank"
             >
               看电影
@@ -72,7 +72,7 @@
           >
             <a
               class="nav-link"
-              href="http://117.72.77.209:1008/avatar"
+              :href="api.ServerDomain+':1008/avatar'"
               target="_blank"
             >
               头像生成器
@@ -93,11 +93,11 @@
               aria-labelledby="navbarDropdown-user"
             >
               <a
-                href="http://117.72.77.209:1008/imageList/index.html"
+                :href="api.ServerDomain+':1008/imageList/index.html'"
                 class="dropdown-item"
               >壁纸</a>
               <a
-                href="http://117.72.77.209:1008/imageList/animation.html"
+                :href="api.ServerDomain+':1008/imageList/animation.html'"
                 class="dropdown-item"
               >动效</a>
             </div>
@@ -117,11 +117,11 @@
               aria-labelledby="navbarDropdown-user"
             >
               <a
-                href="http://117.72.77.209:1003"
+                :href="api.ServerDomain+':1003/'"
                 class="dropdown-item"
               >Wallet</a>
               <a
-                href="http://117.72.77.209:1002"
+                :href="api.ServerDomain+':1002/'"
                 class="dropdown-item"
               >BY</a>
             </div>
@@ -141,19 +141,19 @@
               aria-labelledby="navbarDropdown-user"
             >
               <a
-                href="http://117.72.77.209:1008/tool/joke"
+                :href="api.ServerDomain+':1008/tool/joke'"
                 class="dropdown-item"
               >笑话大全</a>
               <a
-                href="http://117.72.77.209:1008/tool/jokeRandom"
+                :href="api.ServerDomain+':1008/tool/jokeRandom'"
                 class="dropdown-item"
               >笑话随机</a>
               <a
-                href="http://117.72.77.209:1008/tool/qinghua"
+                :href="api.ServerDomain+':1008/tool/qinghua'"
                 class="dropdown-item"
               >爱的箴言</a>
               <a
-                href="http://117.72.77.209:1008/tool/dog"
+                :href="api.ServerDomain+':1008/tool/dog'"
                 class="dropdown-item"
               >舔狗日记</a>
             </div>
@@ -173,27 +173,27 @@
               aria-labelledby="navbarDropdown-user"
             >
               <a
-                href="http://117.72.77.209:1008/tool/touziGame"
+                :href="api.ServerDomain+':1008/tool/touziGame'"
                 class="dropdown-item"
               >骰子游戏</a>
               <a
-                href="http://117.72.77.209:1008/tool/qrCode"
+                :href="api.ServerDomain+':1008/tool/qrCode'"
                 class="dropdown-item"
               >二维码生成器</a>
               <a
-                href="http://117.72.77.209:1008/tool/text"
+                :href="api.ServerDomain+':1008/tool/text'"
                 class="dropdown-item"
               >国际化转换</a>
               <a
-                href="http://117.72.77.209:1008/tool/regularExpression"
+                :href="api.ServerDomain+':1008/tool/regularExpression'"
                 class="dropdown-item"
               >正则验证</a>
               <a
-                href="http://117.72.77.209:1008/tool/translation"
+                :href="api.ServerDomain+':1008/tool/translation'"
                 class="dropdown-item"
               >翻译</a>
               <a
-                href="http://117.72.77.209:1008/tool/csvres"
+                :href="api.ServerDomain+':1008/tool/csvres'"
                 class="dropdown-item"
               >表格去重</a>
             </div>
@@ -207,7 +207,7 @@
             <a
               v-show="!token"
               class="nav-link link_border"
-              href="http://117.72.77.209:1008/login"
+              :href="api.ServerDomain+':1008/login'"
             >登录</a>
             <nuxt-link
               v-show="token"
@@ -245,7 +245,7 @@
 </template>
 
 <script>
-import Cookies from "js-cookie";
+import api from "~/plugins/api";
 import { getToken, setToken, setExpiresIn, removeToken } from "~/plugins/auth";
 export default {
   inject: ["reload"],
@@ -255,10 +255,10 @@ export default {
       token: false,
       avatar: "",
       name: "",
+      api: api,
     };
   },
   beforeMount: function () {
-    // this.fetchDate()
   },
   mounted: function () {
     $("#navbarText a").click(function () {
@@ -266,17 +266,6 @@ export default {
         $("#navbarText").collapse('hide');
       }
     });
-    // $(window).scroll(function () {
-    //   //小屏幕下的导航条折叠
-    //   if ($(window).width() < 768) {
-    //     //点击导航链接之后，把导航选项折叠起来
-    //     //滚动屏幕时，把导航选项折叠起来
-    //     $(window).scroll(function () {
-    //       $("#navbarText").collapse('hide');
-    //     });
-    //   }
-    // });
-    // console.log(4) // undefined
     this.fetchDate();
   },
   watch: {

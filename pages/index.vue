@@ -39,6 +39,7 @@ export default {
   data: function () {
     return {
       openPath: "#",
+      api:api
     };
   },
   head() {
@@ -49,9 +50,9 @@ export default {
   beforeMount: function () {},
   mounted: function () {
     if (getToken()) {
-      this.openPath="http://117.72.77.209:1008/"
+      this.openPath=api.ServerDomain+":1008/"
     } else {
-      this.openPath="http://117.72.77.209:1008/login"
+      this.openPath=api.ServerDomain+":1008/login"
     }
   },
   methods: {},

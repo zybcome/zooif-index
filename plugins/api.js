@@ -3,11 +3,17 @@ import {
   post
 } from '@/plugins/axios'
 const admin = "";
-const http = "http://117.72.77.209:1005"
+let ServerDomain;
+if (process.env.NODE_ENV === 'production') {
+  ServerDomain = "http://117.72.77.209"
+} else {
+  ServerDomain = "http://127.0.0.1"
+}
+const http = ServerDomain+":1005"
 const alapi = "https://v2.alapi.cn/api"
 // const http = "http://127.0.0.1:810"
 export default {
-  ServerDomain: '',
+  ServerDomain: ServerDomain,
   login: data => post(http+admin + '/login', data),
   getCodeImg: data => get(http+admin + '/captchaImage', data),
   getInfo: data => get(http+admin + '/getInfo', data),
