@@ -20,7 +20,7 @@ export default {
       { src: '/js/jquery-3.6.0.min.js', type: "text/javascript" },
       { src: '/js/jquery.i18n.properties-min-1.0.9.js', type: "text/javascript" },
       { src: '/js/bootstrap.min.js', type: "text/javascript" },
-      { src: '/js/baidutongji.js', type: "text/javascript" },
+      // { src: '/js/baidutongji.js', type: "text/javascript" },
       { src: '/js/crypto-js.js', type: "text/javascript" }
     ],
     link: [
