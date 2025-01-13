@@ -21,7 +21,7 @@ export default {
       { src: '/js/jquery.i18n.properties-min-1.0.9.js', type: "text/javascript" },
       { src: '/js/bootstrap.min.js', type: "text/javascript" },
       { src: '/js/baidutongji.js', type: "text/javascript" },
-      { src: 'https://cdn.bootcdn.net/ajax/libs/crypto-js/4.0.0/crypto-js.js', type: "text/javascript" }
+      { src: '/js/crypto-js.js', type: "text/javascript" }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
