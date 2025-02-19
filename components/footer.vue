@@ -4,7 +4,7 @@
     <div class="page4_bottom">
       <div>
         <p>
-          CopyRight © 2022 ZOOIF.COM 版权所有，保留所有权利
+          CopyRight © 2025 ZOOIF.COM 版权所有，保留所有权利
         </p>
       </div>
     </div>
